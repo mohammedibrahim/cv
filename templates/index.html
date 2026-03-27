@@ -5,6 +5,54 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{{ config.title }}</title>
   <meta name="description" content="{{ config.description }}">
+  <link rel="canonical" href="{{ config.base_url }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ config.title }}">
+  <meta property="og:description" content="{{ config.description }}">
+  <meta property="og:url" content="{{ config.base_url }}">
+  <meta property="og:image" content="{{ get_url(path='img/profile.jpg') }}">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ config.title }}">
+  <meta name="twitter:description" content="{{ config.description }}">
+  <meta name="twitter:image" content="{{ get_url(path='img/profile.jpg') }}">
+
+  <!-- Additional SEO -->
+  <meta name="author" content="Mohamed Ibrahim Abdelkader Alokl">
+  <meta name="robots" content="index, follow">
+  <meta name="keywords" content="Senior Software Engineer, Backend Developer, PHP, Laravel, Golang, Python, AWS, Kubernetes, Berlin, Germany, API Design, Microservices, Data Engineering">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohamed Ibrahim Abdelkader Alokl",
+    "jobTitle": "Senior Software Engineer",
+    "url": "https://mibrah.im",
+    "image": "https://mibrah.im/img/profile.jpg",
+    "email": "m@mibrah.im",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Berlin",
+      "addressCountry": "DE"
+    },
+    "sameAs": [
+      "https://github.com/mohammedibrahim",
+      "https://linkedin.com/in/muhamadibrahim"
+    ],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Shorouk Academy"
+    },
+    "knowsAbout": ["PHP", "Laravel", "Golang", "Python", "AWS", "Kubernetes", "Docker", "Terraform", "API Design", "Microservices", "Data Engineering", "AI Engineering"]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
