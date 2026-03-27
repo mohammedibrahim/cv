@@ -617,8 +617,19 @@ a {
   }
 }
 
+.print-only {
+  display: none;
+}
+
 // Print styles
 @media print {
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-only {
+    display: inline !important;
+  }
   .header__actions, .header__contact-item--btn, .theme-toggle, .no-print {
     display: none !important;
   }
