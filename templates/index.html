@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ config.title }}</title>
+  <meta name="description" content="{{ config.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ get_url(path='style.css') }}">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <h1 class="header__name">Mohamed Ibrahim Abdelkader Alokl</h1>
+      <p class="header__title">Senior Software Engineer</p>
+    </div>
+  </header>
+
+  <nav class="contact">
+    <div class="container">
+      <ul class="contact__list">
+        <li class="contact__item">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <a href="mailto:m@mibrah.im">m@mibrah.im</a>
+        </li>
+        <li class="contact__item">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+          Berlin, Germany
+        </li>
+        <li class="contact__item">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          <a href="https://github.com/mohammedibahim" target="_blank" rel="noopener">github.com/mohammedibahim</a>
+        </li>
+        <li class="contact__item">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <a href="https://linkedin.com/in/muhamadibrahim" target="_blank" rel="noopener">linkedin.com/in/muhamadibrahim</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main">
+    <div class="container">
+
+      <!-- Summary -->
+      <section class="section">
+        <h2 class="section__title">Summary</h2>
+        <p class="summary">
+          Seasoned backend developer with over 14 years of experience across various business domains.
+          Specializing in database management, API development, and ensuring the security and scalability
+          of backend systems. With a goal to advance into a software architect role, committed to delivering
+          innovative solutions that drive business success.
+        </p>
+      </section>
+
+      <!-- Work History -->
+      <section class="section">
+        <h2 class="section__title">Work History</h2>
+
+        <article class="job">
+          <div class="job__header">
+            <div>
+              <h3 class="job__company"><a href="https://purposegreen.com" target="_blank" rel="noopener">Purpose Green</a></h3>
+              <p class="job__role">Senior Software Engineer</p>
+            </div>
+          </div>
+          <p class="job__meta">Berlin, Germany &middot; 07/2024 &ndash; Present</p>
+          <p class="job__achievements-title">Key Achievements</p>
+          <ul class="job__list">
+            <li><strong>AI &amp; LLM Engineering:</strong> Architected an AI-powered Real Estate Chat system using Claude AI (Anthropic), featuring multi-turn conversations and automated document extraction (PDF/Images) for property management.</li>
+            <li><strong>Identity &amp; Access Management:</strong> Led the full migration of the authentication system to Auth0, implementing passwordless auth, social logins, and seamless user migration flows.</li>
+            <li><strong>System Architecture:</strong> Designed and maintained a Modular Monolith using Hexagonal Architecture and DDD principles, ensuring strict boundary enforcement and high maintainability.</li>
+            <li><strong>Data Engineering &amp; Analytics:</strong> Built a robust data lake and warehouse using Amazon Redshift (Serverless), dbt, and AWS Glue, integrating data from HubSpot, Google Ads, and Stripe.</li>
+            <li><strong>ETL Pipelines:</strong> Developed automated ETL scripts using Python/Spark and Airbyte to synchronize SaaS data, enabling data-driven decision-making for ESG scoring.</li>
+            <li><strong>Infrastructure as Code:</strong> Managed cloud environments using Terraform (HCL) and established CI/CD workflows via GitHub Actions for both application and data pipelines.</li>
+            <li><strong>Quality Assurance:</strong> Achieved 80%+ test coverage on core business logic using Pest PHP, TDD workflows, and static analysis tools (PHPStan).</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__header">
+            <div>
+              <h3 class="job__company">Y42</h3>
+              <p class="job__role">Senior Software Engineer</p>
+            </div>
+          </div>
+          <p class="job__meta">Berlin, Germany &middot; 03/2022 &ndash; 06/2024</p>
+          <p class="job__achievements-title">Key Achievements</p>
+          <ul class="job__list">
+            <li>Spearheaded the implementation of microservices architecture, optimizing system scalability and performance.</li>
+            <li>Orchestrated the development and integration of new functionalities including SCIM and SAML, fostering seamless user authentication and authorization processes.</li>
+            <li>Pioneered the integration of eCommerce solutions with Chargebee and Google Marketplace, driving revenue growth and market expansion.</li>
+            <li>Implemented advanced telemetry tracking via OpenTelemetry Integration, providing valuable insights for performance optimization.</li>
+            <li>Played a key role in establishing Kubernetes infrastructure, ensuring high availability and resilience for mission-critical applications.</li>
+            <li>Developed and implemented internal packages to streamline service communication, including a pubsub package facilitating seamless message pulling and pushing with zero-code configuration.</li>
+            <li>Developed and managed backend services written in Golang.</li>
+          </ul>
+        </article>
+
+        <article class="job">
+          <div class="job__header">
+            <div>
+              <h3 class="job__company">CEQUENS</h3>
+              <p class="job__role">Principal Software Engineer</p>
+            </div>
+          </div>
+          <p class="job__meta">Cairo, Egypt &middot; 07/2019 &ndash; 02/2022</p>
+          <p class="job__achievements-title">Key Achievements</p>
+          <ul class="job__list">
+            <li>Designed and implemented a cutting-edge chatbot platform using Botpress, revolutionizing customer engagement and support processes.</li>
+            <li>Developed a robust reporting system utilizing Elasticsearch and Kibana, enabling data-driven decision-making and performance analysis.</li>
+            <li>Successfully integrated social media channels like WhatsApp, iMessage, RCS, and Facebook, expanding the reach and accessibility of communication channels.</li>
+          </ul>
+        </article>
+      </section>
+
+      <!-- Skills -->
+      <section class="section">
+        <h2 class="section__title">Skills</h2>
+        <div class="skills">
+          <div class="skills__category">
+            <span class="skills__label">Languages</span>
+            <span class="skills__values">PHP 8.4, Golang, Python (Glue/Spark/Lambda), SQL (Redshift/PostgreSQL), TypeScript, HCL (Terraform)</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">AI &amp; LLM Engineering</span>
+            <span class="skills__values">AI Agent Architecture, Claude AI (Anthropic) Integration, Document Processing (Multimodal PDF/Image Extraction), Conversational AI</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">Data &amp; Analytics</span>
+            <span class="skills__values">Amazon Redshift (Serverless), Redshift Spectrum, dbt, Airbyte, AWS Glue (ETL, Crawlers, Data Catalog)</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">Cloud &amp; Infra</span>
+            <span class="skills__values">AWS (S3, Lambda, IAM, RDS), GCP, Terraform, Kubernetes, Docker</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">Architecture</span>
+            <span class="skills__values">DDD, Hexagonal Architecture, Modular Monoliths, Microservices, CQRS, SOLID</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">IAM</span>
+            <span class="skills__values">Auth0, SCIM, SAML, OAuth2, Ory Hydra</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">eCommerce</span>
+            <span class="skills__values">Chargebee, Stripe, PayPal, GCMP (SaaS), Subscription Billing Lifecycle</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">Integrations</span>
+            <span class="skills__values">HubSpot CRM, SendGrid, OpenTelemetry, Redis, Pub/Sub, SQS</span>
+          </div>
+          <div class="skills__category">
+            <span class="skills__label">Testing &amp; Quality</span>
+            <span class="skills__values">TDD, Pest PHP, PHPStan, Rector, OpenAPI/Swagger</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section class="section">
+        <h2 class="section__title">Education</h2>
+        <div class="education">
+          <p class="education__degree">Bachelor of Engineering</p>
+          <p class="education__major">Major: Biomedical Engineering</p>
+          <p class="education__school">Shorouk Academy, Cairo Governorate</p>
+          <p class="education__meta">09/2005 &ndash; 08/2010</p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+</body>
+</html>

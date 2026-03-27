@@ -1,0 +1,9 @@
+base_url = "https://mibrah.im/cv"
+title = "Mohamed Alokl - Senior Software Engineer"
+description = "CV of Mohamed Ibrahim Abdelkader Alokl"
+compile_sass = true
+minify_html = true
+
+[markdown]
+
+[extra]
