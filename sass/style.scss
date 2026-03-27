@@ -621,6 +621,10 @@ a {
   display: none;
 }
 
+@page {
+  margin: 10mm 10mm;
+}
+
 // Print styles
 @media print {
   .print-hide {
