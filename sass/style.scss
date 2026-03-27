@@ -636,25 +636,48 @@ a {
 
   .header {
     padding: 0.8rem 0;
-  }
+    background: white !important;
+    color: #2d2d2d !important;
 
-  .header__row {
-    gap: 1rem;
-  }
-
-  .header__photo {
-    width: 70px;
-    height: 70px;
+    &::before {
+      display: none;
+    }
   }
 
   .header__name {
+    color: #2d2d2d !important;
     font-size: 1.3rem;
     margin-bottom: 0.1rem;
   }
 
   .header__title {
+    color: #555 !important;
+    opacity: 1;
     font-size: 0.75rem;
     margin-bottom: 0.2rem;
+  }
+
+  .header__contact-item {
+    color: #555 !important;
+
+    svg {
+      fill: #555 !important;
+    }
+
+    a {
+      color: #555 !important;
+    }
+  }
+
+  .header__photo {
+    width: 70px;
+    height: 70px;
+    border-color: #ddd !important;
+    box-shadow: none !important;
+  }
+
+  .header__row {
+    gap: 1rem;
   }
 
   .header__contact {
