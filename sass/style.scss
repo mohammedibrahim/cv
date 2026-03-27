@@ -681,8 +681,8 @@ a {
   margin: 10mm 10mm;
 }
 
-// Print/PDF shared styles
-@mixin pdf-styles {
+// Print styles — keep visual look matching website
+@media print {
   .print-hide {
     display: none !important;
   }
@@ -696,10 +696,12 @@ a {
   }
 
   body {
-    background: white;
+    background: white !important;
     font-size: 11px;
     line-height: 1.35;
-    color: #2d2d2d;
+    color: #2d2d2d !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
 
   .header {
@@ -755,10 +757,11 @@ a {
   }
 
   .card {
-    box-shadow: none;
+    box-shadow: none !important;
     border: none;
     padding: 0.5rem 0;
     margin-bottom: 0.3rem;
+    background: white !important;
   }
 
   .main {
@@ -768,16 +771,23 @@ a {
   .summary {
     font-size: 0.85rem;
     line-height: 1.5;
+    color: #555 !important;
   }
 
   .section__title {
     margin-bottom: 0.5rem;
     font-size: 0.75rem;
+    color: #888 !important;
+
+    &::after {
+      background: #e8eaed !important;
+    }
   }
 
   .job {
     margin-bottom: 0.8rem;
     padding-bottom: 0.8rem;
+    border-bottom-color: #e8eaed !important;
 
     &__header {
       margin-bottom: 0.5rem;
@@ -786,50 +796,65 @@ a {
     &__logo {
       width: 32px;
       height: 32px;
+      background: #f0f4f8 !important;
     }
 
     &__company {
       font-size: 1rem;
+      color: #2d2d2d !important;
     }
 
     &__role {
       font-size: 0.85rem;
+      color: #3498db !important;
     }
 
     &__meta {
       font-size: 0.75rem;
+      color: #888 !important;
     }
 
     &__list li {
       font-size: 0.8rem;
       line-height: 1.45;
       margin-bottom: 0.2rem;
+      color: #555 !important;
+
+      &::before {
+        background: #3498db !important;
+      }
+
+      strong {
+        color: #2d2d2d !important;
+      }
     }
 
     &__tags {
       margin-top: 0.5rem;
       padding-top: 0.4rem;
+      border-top: 1px dashed #e8eaed !important;
     }
 
     &__tag {
       font-size: 0.65rem;
       padding: 0.1rem 0.4rem;
-      background: #e8f0fe !important;
-      color: #1a73e8 !important;
-      border: none;
+      background: #f0f4f8 !important;
+      color: #3498db !important;
+      border-radius: 5px;
     }
   }
 
   .recommendation {
     padding: 0.7rem;
-    background: #f5f7fa !important;
-    border-left: 3px solid #1a73e8 !important;
+    background: #f0f4f8 !important;
+    border-left: 3px solid #3498db !important;
+    border-radius: 10px;
 
     &__text {
       font-size: 0.8rem;
       line-height: 1.45;
       margin-bottom: 0.5rem;
-      color: #333 !important;
+      color: #555 !important;
     }
 
     &__name {
@@ -837,17 +862,21 @@ a {
     }
 
     &__role {
-      color: #666 !important;
+      color: #888 !important;
     }
 
     &__avatar {
-      background: #1a73e8 !important;
+      background: #3498db !important;
       color: #fff !important;
     }
   }
 
   .recommendations {
     gap: 0.5rem;
+
+    &__note {
+      display: none !important;
+    }
   }
 
   .skills-grid {
@@ -856,45 +885,54 @@ a {
 
   .skills-group {
     padding: 0.4rem 0.6rem;
+    background: #f0f4f8 !important;
+    border-radius: 10px;
 
     &__label {
       font-size: 0.65rem;
       margin-bottom: 0.3rem;
+      color: #3498db !important;
     }
   }
 
   .skill-tag {
     font-size: 0.7rem;
     padding: 0.15rem 0.5rem;
+    background: white !important;
+    color: #555 !important;
+    border: 1px solid #e8eaed !important;
   }
 
   .education {
     &__degree {
       font-size: 0.9rem;
+      color: #2d2d2d !important;
+    }
+
+    &__major {
+      color: #3498db !important;
+    }
+
+    &__school {
+      color: #555 !important;
+    }
+
+    &__meta {
+      color: #888 !important;
     }
 
     &__icon {
       width: 36px;
       height: 36px;
+      background: #f0f4f8 !important;
 
       svg {
         width: 18px;
         height: 18px;
+        fill: #3498db !important;
       }
     }
   }
-}
-
-@media print {
-  @include pdf-styles;
-}
-
-.pdf-mode {
-  background: white;
-  font-size: 11px;
-  line-height: 1.35;
-  color: #2d2d2d;
-  @include pdf-styles;
 }
 
 // Responsive
