@@ -20,20 +20,20 @@
 [data-theme="dark"] {
   --primary: #e0e0e0;
   --primary-light: #60a5fa;
-  --primary-dark: #121212;
+  --primary-dark: #0a0a0a;
   --text: #e0e0e0;
-  --text-light: #a0a0a0;
-  --text-muted: #707070;
-  --bg: #121212;
-  --white: #1e1e1e;
-  --border: #333333;
+  --text-light: #b0b0b0;
+  --text-muted: #777777;
+  --bg: #0a0a0a;
+  --white: #141414;
+  --border: #2a2a2a;
   --accent: #60a5fa;
-  --section-bg: #1e1e1e;
-  --shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
-  --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.5);
-  --skill-bg: #2a2a2a;
-  --skill-hover: #333333;
-  --edu-icon-bg: #2a2a2a;
+  --section-bg: #141414;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+  --shadow-hover: 0 4px 20px rgba(0, 0, 0, 0.7);
+  --skill-bg: #1a1a1a;
+  --skill-hover: #222222;
+  --edu-icon-bg: #1a1a1a;
 }
 
 * {
@@ -75,7 +75,7 @@ a {
 
 // Header
 .header {
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #f0f2f5 100%);
   color: #2d2d2d;
   padding: 2.5rem 0 2rem;
   text-align: left;
@@ -814,16 +814,35 @@ a {
     &__tag {
       font-size: 0.65rem;
       padding: 0.1rem 0.4rem;
+      background: #e8f0fe !important;
+      color: #1a73e8 !important;
+      border: none;
     }
   }
 
   .recommendation {
     padding: 0.7rem;
+    background: #f5f7fa !important;
+    border-left: 3px solid #1a73e8 !important;
 
     &__text {
       font-size: 0.8rem;
       line-height: 1.45;
       margin-bottom: 0.5rem;
+      color: #333 !important;
+    }
+
+    &__name {
+      color: #2d2d2d !important;
+    }
+
+    &__role {
+      color: #666 !important;
+    }
+
+    &__avatar {
+      background: #1a73e8 !important;
+      color: #fff !important;
     }
   }
 
