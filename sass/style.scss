@@ -752,8 +752,15 @@ a {
 
   .header__contact {
     margin-top: 0.3rem;
-    gap: 0.6rem;
+    gap: 0.3rem 0.6rem;
     font-size: 0.8rem;
+    flex-wrap: wrap;
+
+    // GitHub and LinkedIn on their own line
+    .header__contact-item:nth-child(3),
+    .header__contact-item:nth-child(4) {
+      flex-basis: 100%;
+    }
   }
 
   .card {
