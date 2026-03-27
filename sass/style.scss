@@ -623,86 +623,156 @@ a {
     display: none !important;
   }
 
-  body {
-    background: white;
-    font-size: 12px;
-    line-height: 1.4;
-  }
-
-  .header {
-    padding: 1rem 0;
+  * {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
 
+  body {
+    background: white;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .header {
+    padding: 0.8rem 0;
+  }
+
+  .header__row {
+    gap: 1rem;
+  }
+
   .header__photo {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
   }
 
   .header__name {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.1rem;
   }
 
   .header__title {
-    font-size: 0.8rem;
-    margin-bottom: 0.3rem;
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
   }
 
   .header__contact {
-    margin-top: 0.5rem;
-    gap: 0.8rem;
+    margin-top: 0.3rem;
+    gap: 0.6rem;
+    font-size: 0.8rem;
   }
 
   .card {
     box-shadow: none;
-    border: 1px solid #e0e0e0;
-    padding: 1rem 1.5rem;
-    margin-bottom: 0.8rem;
-    break-inside: avoid;
+    border: none;
+    padding: 0.5rem 0;
+    margin-bottom: 0.3rem;
   }
 
   .main {
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
   }
 
   .summary {
-    font-size: 0.9rem;
-    line-height: 1.6;
-  }
-
-  .job {
-    break-inside: avoid;
-    margin-bottom: 1.2rem;
-    padding-bottom: 1.2rem;
-
-    &__list li {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      margin-bottom: 0.3rem;
-    }
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .section__title {
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .job {
     margin-bottom: 0.8rem;
+    padding-bottom: 0.8rem;
+
+    &__header {
+      margin-bottom: 0.5rem;
+    }
+
+    &__logo {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__company {
+      font-size: 1rem;
+    }
+
+    &__role {
+      font-size: 0.85rem;
+    }
+
+    &__meta {
+      font-size: 0.75rem;
+    }
+
+    &__list li {
+      font-size: 0.8rem;
+      line-height: 1.45;
+      margin-bottom: 0.2rem;
+    }
+
+    &__tags {
+      margin-top: 0.5rem;
+      padding-top: 0.4rem;
+    }
+
+    &__tag {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+    }
   }
 
   .recommendation {
-    padding: 1rem;
+    padding: 0.7rem;
     break-inside: avoid;
 
     &__text {
-      font-size: 0.85rem;
-      line-height: 1.5;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      margin-bottom: 0.5rem;
     }
   }
 
   .recommendations {
-    gap: 0.8rem;
+    gap: 0.5rem;
+  }
+
+  .skills-grid {
+    gap: 0.5rem;
   }
 
   .skills-group {
-    padding: 0.6rem 0.8rem;
+    padding: 0.4rem 0.6rem;
+
+    &__label {
+      font-size: 0.65rem;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .skill-tag {
+    font-size: 0.7rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .education {
+    &__degree {
+      font-size: 0.9rem;
+    }
+
+    &__icon {
+      width: 36px;
+      height: 36px;
+
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
   }
 }
 
