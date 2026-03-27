@@ -619,34 +619,90 @@ a {
 
 // Print styles
 @media print {
-  .header__actions, .no-print {
+  .header__actions, .header__contact-item--btn, .theme-toggle, .no-print {
     display: none !important;
   }
 
   body {
     background: white;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.4;
   }
 
   .header {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+  }
+
+  .header__photo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .header__name {
+    font-size: 1.4rem;
+  }
+
+  .header__title {
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .header__contact {
+    margin-top: 0.5rem;
+    gap: 0.8rem;
   }
 
   .card {
     box-shadow: none;
     border: 1px solid #e0e0e0;
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
+    margin-bottom: 0.8rem;
     break-inside: avoid;
   }
 
   .main {
-    padding: 1rem 0;
+    padding: 0.5rem 0;
+  }
+
+  .summary {
+    font-size: 0.9rem;
+    line-height: 1.6;
   }
 
   .job {
     break-inside: avoid;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1.2rem;
+
+    &__list li {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      margin-bottom: 0.3rem;
+    }
+  }
+
+  .section__title {
+    margin-bottom: 0.8rem;
+  }
+
+  .recommendation {
+    padding: 1rem;
+    break-inside: avoid;
+
+    &__text {
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+  }
+
+  .recommendations {
+    gap: 0.8rem;
+  }
+
+  .skills-group {
+    padding: 0.6rem 0.8rem;
   }
 }
 
