@@ -397,9 +397,12 @@
     function downloadPDF() {
       const wasDark = document.documentElement.getAttribute('data-theme') === 'dark';
       if (wasDark) setTheme(false);
-      document.body.classList.add('pdf-mode');
 
-      const opt = {
+      // Hide download button and theme toggle during capture
+      var hideEls = document.querySelectorAll('.header__contact-item--btn, .theme-toggle');
+      hideEls.forEach(function(el) { el.style.display = 'none'; });
+
+      var opt = {
         margin: [8, 8, 8, 8],
         filename: 'Mohamed-Alokl-CV.pdf',
         image: { type: 'jpeg', quality: 0.98 },
@@ -409,7 +412,7 @@
       };
 
       html2pdf().set(opt).from(document.body).save().then(function() {
-        document.body.classList.remove('pdf-mode');
+        hideEls.forEach(function(el) { el.style.display = ''; });
         if (wasDark) setTheme(true);
       });
     }
