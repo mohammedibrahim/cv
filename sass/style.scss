@@ -639,7 +639,7 @@ a {
     display: none !important;
   }
 
-  body, & {
+  body {
     background: white;
     font-size: 11px;
     line-height: 1.35;
@@ -815,6 +815,10 @@ a {
 }
 
 .pdf-mode {
+  background: white;
+  font-size: 11px;
+  line-height: 1.35;
+  color: #2d2d2d;
   @include pdf-styles;
 }
 
