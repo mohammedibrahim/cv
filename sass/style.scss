@@ -75,8 +75,8 @@ a {
 
 // Header
 .header {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-  color: #ffffff;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #dee2e6 100%);
+  color: #2d2d2d;
   padding: 2.5rem 0 2rem;
   text-align: left;
   position: relative;
@@ -84,6 +84,46 @@ a {
 
   [data-theme="dark"] & {
     background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #252525 100%);
+    color: #ffffff;
+  }
+
+  [data-theme="dark"] & &__name {
+    color: #ffffff;
+  }
+
+  [data-theme="dark"] & &__title {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  [data-theme="dark"] & &__photo {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  [data-theme="dark"] & &__contact-item {
+    color: rgba(255, 255, 255, 0.8);
+
+    svg {
+      fill: rgba(255, 255, 255, 0.7);
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+
+      &:hover {
+        color: #ffffff;
+      }
+    }
+
+    &--btn {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.25);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+        color: #ffffff;
+      }
+    }
   }
 
   &::before {
@@ -93,14 +133,8 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    background: radial-gradient(ellipse at 20% 50%, rgba(96, 165, 250, 0.12) 0%, transparent 50%),
-                radial-gradient(ellipse at 80% 50%, rgba(96, 165, 250, 0.08) 0%, transparent 50%);
+    background: none;
     pointer-events: none;
-
-    [data-theme="dark"] & {
-      background: radial-gradient(ellipse at 20% 50%, rgba(96, 165, 250, 0.06) 0%, transparent 50%),
-                  radial-gradient(ellipse at 80% 50%, rgba(96, 165, 250, 0.04) 0%, transparent 50%);
-    }
   }
 
   .container {
@@ -123,8 +157,8 @@ a {
     height: 110px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     flex-shrink: 0;
   }
 
@@ -133,7 +167,7 @@ a {
     font-weight: 700;
     letter-spacing: -0.01em;
     margin-bottom: 0.2rem;
-    color: #ffffff;
+    color: #2d2d2d;
   }
 
   &__title {
@@ -142,7 +176,7 @@ a {
     opacity: 0.8;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #555;
     margin-bottom: 0.6rem;
   }
 
@@ -159,43 +193,43 @@ a {
     align-items: center;
     gap: 0.5rem;
     font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.8);
+    color: #555;
     transition: color 0.2s;
 
     svg {
       width: 15px;
       height: 15px;
-      fill: rgba(255, 255, 255, 0.7);
+      fill: #777;
       flex-shrink: 0;
       transition: fill 0.2s;
     }
 
     a {
-      color: rgba(255, 255, 255, 0.8);
+      color: #555;
       border-bottom: 1px solid transparent;
       transition: all 0.2s;
 
       &:hover {
-        color: #ffffff;
-        border-bottom-color: rgba(255, 255, 255, 0.5);
+        color: #2d2d2d;
+        border-bottom-color: rgba(0, 0, 0, 0.3);
       }
     }
 
     &:hover svg {
-      fill: #ffffff;
+      fill: #2d2d2d;
     }
 
     &--btn {
-      background: rgba(255, 255, 255, 0.12);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(0, 0, 0, 0.15);
       padding: 0.3rem 0.8rem;
       border-radius: 100px;
       cursor: pointer;
       transition: all 0.2s;
 
       &:hover {
-        background: rgba(255, 255, 255, 0.25);
-        color: #ffffff;
+        background: rgba(0, 0, 0, 0.1);
+        color: #2d2d2d;
       }
     }
   }
@@ -213,8 +247,8 @@ a {
   top: 1rem;
   right: 1.5rem;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 50%;
   width: 36px;
   height: 36px;
@@ -223,16 +257,28 @@ a {
   justify-content: center;
   cursor: pointer;
   transition: all 0.2s;
-  backdrop-filter: blur(4px);
 
   svg {
     width: 18px;
     height: 18px;
-    fill: rgba(255, 255, 255, 0.9);
+    fill: #555;
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(0, 0, 0, 0.1);
+  }
+
+  [data-theme="dark"] & {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+
+    svg {
+      fill: rgba(255, 255, 255, 0.9);
+    }
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
   }
 }
 
